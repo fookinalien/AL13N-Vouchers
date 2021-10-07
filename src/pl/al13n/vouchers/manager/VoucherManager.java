@@ -22,11 +22,8 @@ public class VoucherManager {
 
     public Voucher getVoucher(ItemStack itemStack){
         for(Voucher voucher : this.vouchers){
-            if(!voucher.getItemType().equals(itemStack.getType())){
-                continue;
-            }
             ItemMeta itemMeta = itemStack.getItemMeta();
-            if(ChatUtil.fixColor(voucher.getItemName()).equals(itemMeta.getDisplayName()) && ChatUtil.fixColor(voucher.getItemLore()).equals(itemMeta.getLore())){
+            if(voucher.getItemType().equals(itemStack.getType()) && ChatUtil.fixColor(voucher.getItemName()).equals(itemMeta.getDisplayName()) && ChatUtil.fixColor(voucher.getItemLore()).equals(itemMeta.getLore())){
                 return voucher;
             }
         }
