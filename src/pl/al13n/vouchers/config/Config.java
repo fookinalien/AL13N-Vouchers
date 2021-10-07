@@ -26,7 +26,6 @@ public class Config {
         this.voucherInfo = c.getStringList("voucherInfo");
         this.voucherUseInfo = c.getStringList("voucherUseInfo");
         for(String s : c.getConfigurationSection("vouchers").getKeys(false)){
-            System.out.println(c.getString("vouchers." + s + ".item.name"));
             Material itemType = Material.valueOf(c.getString("vouchers." + s + ".item.type").toUpperCase());
             String itemName = c.getString("vouchers." + s + ".item.name");
             List<String> itemLore = c.getStringList("vouchers." + s + ".item.lore");
