@@ -1,0 +1,33 @@
+border: 100
+voucherInfo:
+  - ' '
+  - '&c&lDROP VOUCHERA!'
+  - ' '
+  - '&7Nazwa: {name}'
+  - ' '
+  - '&7Koordynaty: '
+  - ' &aSwiat: &6{world}'
+  - ' &aX: &6{x}'
+  - ' &aY: &6{y}'
+  - ' &aZ: &6{z}'
+  - ' '
+voucherUseInfo:
+  - ' '
+  - '&7Gracz &6{player} &7uzyl vouchera &a{name}'
+  - ' &a&lGRATULACJE!'
+  - ' '
+vouchers:
+  '1':
+    delay: 60
+    command: 'give {player} diamond 1'
+    world: 'world'
+    item:
+      type: 'paper'
+      amount: 1
+      name: '&cVoucher #1'
+      lore:
+        - ' '
+        - '&8%> &7Kliknij &aPPM &7aby go uzyc'
+        - ' '
+      enchants:
+        - 'durability:10'
